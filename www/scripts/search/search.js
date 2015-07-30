@@ -197,7 +197,7 @@
     )
         .controller('searchDetailCtrl', function (jsonFactory,$scope, $q, $timeout, ionicLoading,
                                                   ESService, searchObj, localStorageService) {
-            console.log(searchObj);
+            //console.log(searchObj);
             ESService.lookup(searchObj.table, searchObj.key, searchObj.value).then(function (results) {
                 console.log(results);
                 $scope.results = results;
@@ -260,7 +260,7 @@
             });
             //console.log(searchObj);
             $scope.searchObj = searchObj;
-
+            //console.log('searchObj:',$scope.searchObj) ;
             $scope.deleteHistory = function (result) {
                 var index = $scope.searchHistory.indexOf(result);
                 //console.log(index+' '+$scope.searchHistory.indexOf(index));
@@ -271,8 +271,8 @@
 
             };
             var doSearch = ionic.debounce(function (query) {
-                console.log($scope.searchObj.value);
-                console.log(query);
+                //console.log($scope.searchObj.value);
+                //console.log(query);
 
                 ESService.lookup('e0015_t001', 'BUKRS', '1000', 'BUTXT').then(function (results) {
                     console.log(results);

@@ -81,9 +81,9 @@
                         .$bindTo($rootScope, 'profiles').then(function (data) {
                             //$rootScope.initialize=true;
                             $rootScope.$broadcast('rootScopeInit',true);
-                            console.log($rootScope.profiles.serverUserID);
+                            console.log($rootScope.profiles.serverUser);
 
-                            var ref = fbutil.ref(['tasks', $rootScope.profiles.serverUserID]);
+                            var ref = fbutil.ref(['tasks', $rootScope.profiles.serverUser]);
 
                             ref.on('child_changed', function (childSnapshot, prevChildKey) {
                                 console.log(childSnapshot.key());
