@@ -8,6 +8,7 @@
         jsonFactory.hospitals('search-options').then(function (data) {
             $scope.data = data;
         });
+        //
     });
     //NOTE: We are including the constant `ApiEndpoint` to be used here.
     app.factory('jsonFactory', function ($http, Api) {
