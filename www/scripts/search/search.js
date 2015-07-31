@@ -209,7 +209,7 @@
                 console.log(searchObj.table);
                 $scope.popupLinks = data[searchObj.table].popupLinks;
             });
-//
+
             //ionicLoading.load();
             $scope.keyName = searchObj.key;
             $scope.keyValue = searchObj.value;
